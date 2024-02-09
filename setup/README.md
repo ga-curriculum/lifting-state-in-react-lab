@@ -8,20 +8,23 @@ Open your Terminal application and navigate to your `~/code/ga/labs` directory:
 cd ~/code/ga/labs
 ```
 
-Make a new repository on [GitHub](https://github.com/) named `lifting-state-in-react-lab`.
-
-Clone a copy of your remote repo locally by using the `git clone` command:
+Create a new Vite project for your React app:
 
 ```bash
-git clone https://github.com/<your-username>/lifting-state-in-react-lab.git
+npm create vite@latest
 ```
 
-> 📚 Note: In the link above, where it says `<your-username>`, you should see the username from your GitHub account.
+You'll be prompted to choose a project name. Let's name it `lifting-state-in-react-lab`. 
 
-Next, `cd` into your new cloned directory, `lifting-state-in-react-lab`:
+- Select a framework. Use the arrow keys to choose the `React` option and hit `Enter`.
+
+- Select a variant. Again, use the arrow keys to choose `JavaScript` and hit `Enter`.
+
+Navigate to your new project directory and install the necessary dependencies:
 
 ```bash
 cd lifting-state-in-react-lab
+npm i
 ```
 
 Open the project's folder in your code editor:
@@ -30,31 +33,70 @@ Open the project's folder in your code editor:
 code .
 ```
 
-## Creating a React app
+### Configuring ESLint
 
-Run the following command in your terminal:
+Before we begin, we need to adjust the ESLint configuration. Add the following rules to the `.eslintrc.cjs` file:
 
-```bash
-npm create vite@latest
+```js
+rules: {
+  'react-refresh/only-export-components': [
+    'warn',
+    { allowConstantExport: true },
+  ],
+  'react/prop-types': 'off', // add this line
+  'react/no-unescaped-entities': 'off' // add this line
+},
 ```
 
-You'll be prompted to provide a project name. Simply add `.`. This will tell Vite to use the current directory (`lifting-state-in-react-lab`) for your application.
+The first addition prevents warnings if you're not declaring types for your props (which we're not), and the second prevents warnings if you're using contractions within JSX.
 
-Next, you'll select a framework. Use the arrow keys to choose the `React` option, and hit `Enter`.
+### Clear `App.jsx`
 
-Again, use the arrow keys to choose the `JavaScript` variant and hit `Enter`.
+Open the `App.jsx` file in the `src` directory and replace the contents of it with the following:
 
-Within your project directory, run `npm i` to install the dependencies:
+```jsx
+// src/App.jsx
 
-```bash
-npm i
+const App = () => {
+
+  return (
+    <h1>Hello world!</h1>
+  );
+}
+
+export default App
 ```
 
-## Starter code
+### GitHub setup
+
+To add this project to GitHub, initialize a Git repository:
+
+```bash
+git init
+```
+
+Make a new repository on [GitHub](https://github.com/) named `lifting-state-in-react-lab`. 
+
+Link your local project to your remote GitHub repo:
+
+```bash
+git remote add origin https://github.com/<github-username>/lifting-state-in-react-lab.git
+git push origin main
+```
+
+> 🚨 Do not copy the above command. It will not work. Your GitHub username will replace `<github-username>` (including the `<` and `>`) in the URL above.
+
+
+
+
+
+### Starter code
 
 Clear out any existing code and add the following to `src/App.jsx`:
 
 ```jsx
+// src/App.jsx
+
 import './App.css';
 
 export const availableIngredients = [
@@ -98,9 +140,9 @@ Replace any existing code with the following in `src/App.css`:
 }
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1;
   font-weight: 400;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
