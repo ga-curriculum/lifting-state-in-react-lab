@@ -1,4 +1,4 @@
-# ![Lifting State in React Lab](./assets/tktk-hero.png)
+# ![Lifting State in React Lab](./assets/hero.png)
 
 ## About
 
