@@ -19,7 +19,7 @@ Estimated time to complete core lab exercise: 3hrs
 
 ## Solution code
 
-🏁 [tktk Solution code](https://git.generalassemb.ly/modular-curriculum-all-courses/lifting-state-in-react-components-lab-solution)
+🏁 [tktk Solution code](https://git.generalassemb.ly/modular-curriculum-all-courses/lifting-state-in-react-lab-solution)
 
 ## Internal resources
 
