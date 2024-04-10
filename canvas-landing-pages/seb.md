@@ -1,1 +1,1 @@
-# ![Lifting State in React Lab](./assets/hero.png)
+# ![Lifting State in React Lab](../assets/hero.png)
