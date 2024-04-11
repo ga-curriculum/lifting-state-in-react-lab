@@ -14,7 +14,7 @@ Create a new Vite project for your React app:
 npm create vite@latest
 ```
 
-You'll be prompted to choose a project name. Let's name it `lifting-state-in-react-lab`. 
+You'll be prompted to choose a project name. Let's name it `lifting-state-in-react-lab`.
 
 - Select a framework. Use the arrow keys to choose the `React` option and hit `Enter`.
 
@@ -50,23 +50,6 @@ rules: {
 
 The first addition prevents warnings if you're not declaring types for your props (which we're not), and the second prevents warnings if you're using contractions within JSX.
 
-### Clear `App.jsx`
-
-Open the `App.jsx` file in the `src` directory and replace the contents of it with the following:
-
-```jsx
-// src/App.jsx
-
-const App = () => {
-
-  return (
-    <h1>Hello world!</h1>
-  );
-}
-
-export default App
-```
-
 ### GitHub setup
 
 To add this project to GitHub, initialize a Git repository:
@@ -75,7 +58,7 @@ To add this project to GitHub, initialize a Git repository:
 git init
 ```
 
-Make a new repository on [GitHub](https://github.com/) named `lifting-state-in-react-lab`. 
+Make a new repository on [GitHub](https://github.com/) named `lifting-state-in-react-lab`.
 
 Link your local project to your remote GitHub repo:
 
@@ -86,13 +69,13 @@ git push origin main
 
 > 🚨 Do not copy the above command. It will not work. Your GitHub username will replace `<github-username>` (including the `<` and `>`) in the URL above.
 
+## Add starter code
 
+In this lab, we've included some starter code for you. This approach is designed to help you concentrate on learning about lifting state, without the need to focus on the initial setup, layout, or styling. Don't worry, there's still plenty of work for you to do! Your task is to build on this foundation, primarily focusing on the concept of lifting state in React.
 
+## Clear `App.jsx`
 
-
-### Starter code
-
-Clear out any existing code and add the following to `src/App.jsx`:
+Remove any existing code and add the following to `src/App.jsx`:
 
 ```jsx
 // src/App.jsx
@@ -117,21 +100,22 @@ export const availableIngredients = [
 ];
 
 const App = () => {
-
-	return (
-		<main>
-			<h1>Burger Stacker</h1>
-			<section>
-				{/* List & Stack components */}
-			</section>
-		</main>
-	);
+  return (
+    <main>
+      <h1>Burger Stacker</h1>
+      <section>
+      {/* List & Stack components */}
+      </section>
+    </main>
+  );
 };
 
 export default App;
 ```
 
-Replace any existing code with the following in `src/App.css`:
+## Clear `App.css`
+
+Replace any existing code in `src/App.css` with the following:
 
 ```css
 /* src/App.css */
@@ -168,10 +152,11 @@ main {
   padding: 16px;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 section {
-  width: 100%;
+  width: 80%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -188,7 +173,7 @@ ul {
   margin: 0;
   padding: 16px;
   list-style: none;
-  
+
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -214,80 +199,42 @@ button {
 }
 ```
 
+## Create two new components
+
 Run the following commands in your terminal:
 
 ```bash
+mkdir components
 touch src/components/IngredientList.jsx
 touch src/components/BurgerStack.jsx
 ```
+
+These will serve as the starting components for your burger stacking app.
+
+### IngredientList
 
 Add the following to `src/components/IngredientList.jsx`:
 
 ```jsx
 // src/components/IngredientList.jsx
 const IngredientList = (props) => {
-  return (
-    <ul>
-      // map through props.ingredients
-    </ul>
-  );
+  return <ul>// map through props.ingredients</ul>;
 };
 
 export default IngredientList;
 ```
+
+### BurgerStack
 
 Add the following to `src/components/BurgerStack.jsx`:
 
 ```jsx
 // `src/components/BurgerStack.jsx`
 const BurgerStack = (props) => {
-  return (
-    <ul>
-      // map through props.ingredients
-    </ul>
-  );
+  return <ul>// map through props.ingredients</ul>;
 };
 
 export default BurgerStack;
 ```
 
-In `src/App.jsx`, import `src/components/IngredientList.jsx` and `src/components/BurgerStack.jsx` and add them to the provided `<section>`:
-
-```jsx
-// `src/App.jsx`
-import './App.css';
-import BurgerStack from './components/BurgerStack';
-import IngredientList from './components/IngredientList';
-
-export const availableIngredients = [
-  { name: 'Kaiser Bun', color: 'saddlebrown' },
-  { name: 'Sesame Bun', color: 'sandybrown' },
-  { name: 'Gluten Free Bun', color: 'peru' },
-  { name: 'Lettuce Wrap', color: 'olivedrab' },
-  { name: 'Beef Patty', color: '#3F250B' },
-  { name: 'Soy Patty', color: '#3F250B' },
-  { name: 'Black Bean Patty', color: '#3F250B' },
-  { name: 'Chicken Patty', color: 'burlywood' },
-  { name: 'Lettuce', color: 'lawngreen' },
-  { name: 'Tomato', color: 'tomato' },
-  { name: 'Bacon', color: 'maroon' },
-  { name: 'Onion', color: 'lightyellow' },
-  { name: 'Cheddar Cheese', color: '#FDE18B' },
-  { name: 'Swiss Cheese', color: '#F1E1A8' },
-];
-
-const App = () => {
-
-	return (
-		<main>
-			<h1>Burger Stacker</h1>
-			<section>
-				<IngredientList />
-				<BurgerStack />
-			</section>
-		</main>
-	);
-};
-
-export default App;
-```
+You're ready to go!

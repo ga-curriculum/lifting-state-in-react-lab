@@ -1,8 +1,16 @@
 # ![Lifting State in React Lab](./assets/hero.png)
 
+Welcome to Reactville, a constantly evolving virtual metropolis. Let's build this digital town together, one component at a time.
+
+![tktk - needs ReactVille Skyline](#)
+
 ## About
 
-In this lab, students will create burger builder app that that has two main components: an ingredients list and a burger contents list.  The user will be able to add items from the ingredients list to the the burger contents.  The user will also be able to remove items from the burger contents list.
+Today, you're stepping into the Reactville Burger Shop, a favorite local eatery known for its mouth-watering burgers. In this interactive app, users build their dream burger, choosing from various breads, meats, and toppings. But there’s a catch: it’s also a lesson in 'lifting state' in React. Get ready to stack ingredients and elevate your React skills!
+
+![tktk trim ss](./assets/solution-ui.png)
+
+In this lab, students will create burger builder app that that has two main components: an ingredients list and a burger stack. Users will be able to add items from the ingredients list to the the burger stack to create the perfect burger.
 
 ## Prerequisites
 
@@ -10,7 +18,7 @@ In this lab, students will create burger builder app that that has two main comp
 
 ## Time to complete
 
-Estimated time to complete core lab exercise: 3hrs
+Estimated time to complete core lab exercise: **3 hrs**
 
 ## Content
 
@@ -19,7 +27,7 @@ Estimated time to complete core lab exercise: 3hrs
 
 ## Solution code
 
-🏁 [tktk Solution code](https://git.generalassemb.ly/modular-curriculum-all-courses/lifting-state-in-react-lab-solution)
+🏁 [Solution code](https://git.generalassemb.ly/modular-curriculum-all-courses/lifting-state-in-react-lab-solution)
 
 ## Internal resources
 
