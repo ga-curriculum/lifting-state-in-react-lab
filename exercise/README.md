@@ -4,9 +4,9 @@
 
 Before diving into the exercise, take a moment to inspect the code provided to you during setup. You'll find code for two new components and a complete CSS stylesheet. Your primary focus will be on using React to execute the user stories below, reinforcing the concept of **lifting state**.
 
-## Our application
+## What You'll Build
 
-![tktk Hunter - please add screenshot of final product](../assets/solution-ui.png)
+![tktk Hunter - please add screenshot of final product or trim this ss](../assets/solution-ui.png)
 
 In this lab, you'll be building a burger stacker application. The interface will be divided into two main areas. On one side, you'll have a list of ingredients. Users can select from these ingredients, and upon selection, these items will move to the other side of the screen. This second area is where the user's burger is visually constructed. As ingredients are added, they'll appear stacked in the order they were selected, forming a burger.
 
