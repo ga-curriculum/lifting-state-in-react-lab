@@ -6,13 +6,13 @@ Before diving into the exercise, take a moment to inspect the code provided to y
 
 ## What You'll Build
 
-![tktk Hunter - please add screenshot of final product or trim this ss](../assets/solution-ui.png)
+![Solution UI](../assets/burger.png)
 
 In this lab, you'll be building a burger stacker application. The interface will be divided into two main areas. On one side, you'll have a list of ingredients. Users can select from these ingredients, and upon selection, these items will move to the other side of the screen. This second area is where the user's burger is visually constructed. As ingredients are added, they'll appear stacked in the order they were selected, forming a burger.
 
 Below is a component hierarchy diagram to illustrate how the application will be structured:
 
-![tktk Hunter - please add a chd]()
+![Component hierarchy diagram](./assets/burger-chd.png)
 
 - **App**: The parent component containing `<BurgerStack>` and `<IngredientList>`. It will also contain `stack` state, and two functions for manipulating that state.
 - **BurgerStack**: A `<ul>` that renders the elements held in `stack`. Each ingredient rendered in this component should contain a button for **removing** the ingredient from the `stack`.
