@@ -16,9 +16,6 @@ In this lab, students will create burger builder app that that has two main comp
 
 - Lifting State in React
 
-## Time to complete
-
-Estimated time to complete core lab exercise: **3 hrs**
 
 ## Content
 
