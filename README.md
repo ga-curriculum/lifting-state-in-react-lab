@@ -10,7 +10,7 @@ Today, you're stepping into the Reactville Burger Shop, a favorite local eatery 
 
 ![Solution UI](./assets/burger.png)
 
-In this lab, students will create burger builder app that that has two main components: an ingredients list and a burger stack. Users will be able to add items from the ingredients list to the the burger stack to create the perfect burger.
+In this lab, students will create a burger builder app that that has two main components: an ingredients list and a burger stack. Users will be able to add items from the ingredients list to the the burger stack to create the perfect burger.
 
 ## Prerequisites
 
