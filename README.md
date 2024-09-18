@@ -2,7 +2,7 @@
 
 Welcome to Reactville, a constantly evolving virtual metropolis. Let's build this digital town together, one component at a time.
 
-![ReactVille Skyline](./assets/reactville.png)
+![Reactville Skyline](./assets/reactville.png)
 
 ## About
 
