@@ -1,4 +1,7 @@
-# ![Lifting State in React Lab - Setup](./assets/hero.png)
+<h1>
+  <span class="headline">Lifting State in React Lab</span>
+  <span class="subhead">Setup</span>
+</h1>
 
 ## Setup
 
@@ -35,30 +38,35 @@ code .
 
 ### Configuring ESLint
 
-Before we begin, we need to adjust the ESLint configuration. Add the following rules to the `.eslintrc.cjs` file:
+Before we begin, we need to adjust the ESLint configuration. Add the indicated rules to the `rules` object in your `eslint.config.js` file:
 
-```js
-rules: {
-  'react-refresh/only-export-components': [
-    'warn',
-    { allowConstantExport: true },
-  ],
-  'react/prop-types': 'off', // add this line
-  'react/no-unescaped-entities': 'off' // add this line
-},
+```javascript
+    rules: {
+      ...js.configs.recommended.rules,
+      ...react.configs.recommended.rules,
+      ...react.configs['jsx-runtime'].rules,
+      ...reactHooks.configs.recommended.rules,
+      'react/jsx-no-target-blank': 'off',
+      'react-refresh/only-export-components': [
+        'warn',
+        { allowConstantExport: true },
+      ],
+      'react/prop-types': 'off', // add this line
+      'react/no-unescaped-entities': 'off', // add this line
+    },
 ```
 
-The first addition prevents warnings if you're not declaring types for your props (which we're not), and the second prevents warnings if you're using contractions within JSX.
+The first addition prevents warnings if you don't declare types for your props (which we're not), and the second prevents warnings if you use contractions within JSX.
 
 ### Running the development server
 
-To start the development server and view our app in the browser, we'll use the following command: 
+To start the development server and view our app in the browser, we'll use the following command:
 
 ```bash
 npm run dev
 ```
 
-You should see that `Vite` is available on port number 5173: 
+You should see that `Vite` is available on port number 5173:
 
 ```plaintext
 localhost:5173
@@ -74,7 +82,7 @@ git add .
 git commit -m "init commit"
 ```
 
-Make a new repository on [GitHub](https://github.com/) named lifting-state-in-react-lab. 
+Make a new repository on [GitHub](https://github.com/) named `lifting-state-in-react-lab`.
 
 Link your local project to your remote GitHub repo:
 
@@ -98,24 +106,24 @@ Remove any existing code and add the following to `src/App.jsx`:
 
 import './App.css';
 
-export const availableIngredients = [
-  { name: 'Kaiser Bun', color: 'saddlebrown' },
-  { name: 'Sesame Bun', color: 'sandybrown' },
-  { name: 'Gluten Free Bun', color: 'peru' },
-  { name: 'Lettuce Wrap', color: 'olivedrab' },
-  { name: 'Beef Patty', color: '#3F250B' },
-  { name: 'Soy Patty', color: '#3F250B' },
-  { name: 'Black Bean Patty', color: '#3F250B' },
-  { name: 'Chicken Patty', color: 'burlywood' },
-  { name: 'Lettuce', color: 'lawngreen' },
-  { name: 'Tomato', color: 'tomato' },
-  { name: 'Bacon', color: 'maroon' },
-  { name: 'Onion', color: 'lightyellow' },
-  { name: 'Cheddar Cheese', color: '#FDE18B' },
-  { name: 'Swiss Cheese', color: '#F1E1A8' },
-];
-
 const App = () => {
+  const availableIngredients = [
+    { name: 'Kaiser Bun', color: 'saddlebrown' },
+    { name: 'Sesame Bun', color: 'sandybrown' },
+    { name: 'Gluten Free Bun', color: 'peru' },
+    { name: 'Lettuce Wrap', color: 'olivedrab' },
+    { name: 'Beef Patty', color: '#3F250B' },
+    { name: 'Soy Patty', color: '#3F250B' },
+    { name: 'Black Bean Patty', color: '#3F250B' },
+    { name: 'Chicken Patty', color: 'burlywood' },
+    { name: 'Lettuce', color: 'lawngreen' },
+    { name: 'Tomato', color: 'tomato' },
+    { name: 'Bacon', color: 'maroon' },
+    { name: 'Onion', color: 'lightyellow' },
+    { name: 'Cheddar Cheese', color: '#FDE18B' },
+    { name: 'Swiss Cheese', color: '#F1E1A8' },
+  ];
+
   return (
     <main>
       <h1>Burger Stacker</h1>
@@ -220,19 +228,22 @@ button {
 Run the following commands in your terminal:
 
 ```bash
-mkdir components
-touch src/components/IngredientList.jsx
-touch src/components/BurgerStack.jsx
+mkdir src/components
+mkdir src/components/IngredientList
+touch src/components/IngredientList/IngredientList.jsx
+mkdir src/components/BurgerStack
+touch src/components/BurgerStack/BurgerStack.jsx
 ```
 
 These will serve as the starting components for your burger stacking app.
 
 ### IngredientList
 
-Add the following to `src/components/IngredientList.jsx`:
+Add the following to `src/components/IngredientList/IngredientList.jsx`:
 
 ```jsx
-// src/components/IngredientList.jsx
+// src/components/IngredientList/IngredientList.jsx
+
 const IngredientList = (props) => {
   return <ul>// map through props.ingredients</ul>;
 };
@@ -242,10 +253,11 @@ export default IngredientList;
 
 ### BurgerStack
 
-Add the following to `src/components/BurgerStack.jsx`:
+Add the following to `src/components/BurgerStack/BurgerStack.jsx`:
 
 ```jsx
-// `src/components/BurgerStack.jsx`
+// src/components/BurgerStack/BurgerStack.jsx
+
 const BurgerStack = (props) => {
   return <ul>// map through props.ingredients</ul>;
 };
