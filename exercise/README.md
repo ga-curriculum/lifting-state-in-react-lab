@@ -61,6 +61,8 @@ Your primary goal is to implement the user stories listed above. To get started,
 
 ### Hints
 
+<!-- {% raw %} -->
+
 1. There should be two child components in `src/App.jsx`. One will be responsible for rendering elements in `availableIngredients`, and the other for elements in `stack`.
 
 2. Your application will require two functions in `src/App.jsx`. One called `addToBurger` and another called `removeFromBurger`. Think carefully about what arguments might need to be passed in to each function.
@@ -72,5 +74,7 @@ Your primary goal is to implement the user stories listed above. To get started,
          {ingredient.name}
        </li>
    ```
+
+<!-- {% endraw %} -->
 
 > 📚 *Inline styling* in React involves applying CSS styles directly to elements using the `style` attribute. The attribute accepts an object with camelCased properties as its value.
