@@ -33,7 +33,7 @@ Estimated time to complete core lab exercise: **180 mins**
 
 ### Solution code
 
-🏁 [Solution code](https://git.generalassemb.ly/modular-curriculum-all-courses/lifting-state-in-react-lab-solution)
+🏁 [Solution code](https://github.com/ga-curriculum/lifting-state-in-react-lab-solution)
 
 ### Course landing pages
 
